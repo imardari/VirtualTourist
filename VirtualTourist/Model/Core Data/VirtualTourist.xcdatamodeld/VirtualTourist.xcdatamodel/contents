@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Photo" representedClassName=".Photo" syncable="YES">
+        <attribute name="imageBinary" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photoToPin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pin" inverseName="pinToPhoto" inverseEntity="Pin" syncable="YES"/>
+    </entity>
+    <entity name="Pin" representedClassName=".Pin" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalFlickrPages" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="pinToPhoto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="photoToPin" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Photo" positionX="-252" positionY="-18" width="128" height="88"/>
+        <element name="Pin" positionX="-470" positionY="-9" width="128" height="103"/>
+    </elements>
+</model>
