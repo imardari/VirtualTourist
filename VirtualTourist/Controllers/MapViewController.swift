@@ -149,6 +149,11 @@ class MapViewController: UIViewController {
             locations.append(location)
             // Fetch flickr
             getPhotoFromFlickr(1, location)
+            do {
+                try coreDataStack?.context.save()
+            } catch {
+                print("There was an error saving the context: \(error)")
+            }
         }
     }
 }
@@ -186,7 +191,11 @@ extension MapViewController: MKMapViewDelegate {
                     let annotationToRemove = view.annotation
                     self.mapView.removeAnnotation(annotationToRemove!)
                     coreDataStack?.context.delete(location)
-                    coreDataStack?.save()
+                    do {
+                        try coreDataStack?.context.save()
+                    } catch {
+                        print("There was an error saving the context: \(error)")
+                    }
                     break
                 }
             }
