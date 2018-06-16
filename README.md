@@ -11,6 +11,7 @@ Place a pin on any location of the map, then press the pin and view photos from 
 <ul>
   <li>View new collections of images for any given location</li>
   <li>Add or delete as many pins as you wish</li>
+  <li>Load new collections of images</li>
   <li>Delete images</li>
 </ul>
  
