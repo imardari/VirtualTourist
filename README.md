@@ -14,6 +14,9 @@ Place a pin on any location of the map, then press the pin and view photos from 
   <li>Load new collections of images</li>
   <li>Delete images</li>
 </ul>
+
+## API
+Flickr API
  
 ## Requirements
 iOS 11.0+
